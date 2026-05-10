@@ -1,0 +1,63 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+    bg: #1e1e2e;
+    fg: #ffffff;
+    accent: #3b3b4b; /* Твой темно-фиолетовый */
+    button: #313244;
+}
+
+window {
+    /* Увеличим ширину, чтобы точно влезло 5 кнопок */
+    width: 900px;
+    height: 180px;
+    background-color: @bg;
+    border: 3px;
+    border-color: @accent;
+    border-radius: 20px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ listview ];
+    padding: 25px;
+}
+
+listview {
+    background-color: transparent;
+    /* Явно задаем 5 колонок */
+    columns: 5;
+    lines: 1;
+    spacing: 20px;
+    layout: vertical; /* В rofi-wayland иногда 'vertical' с 5 колонками работает стабильнее */
+    fixed-columns: true;
+}
+
+element {
+    background-color: @button;
+    text-color: @fg;
+    border-radius: 15px;
+    /* Центрируем содержимое элемента */
+    orientation: vertical;
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 45";
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    padding: 20px 0px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @fg;
+    border: 2px;
+    border-color: #ffffff;
+}
+

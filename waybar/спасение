@@ -1,0 +1,52 @@
+* {
+    border: none;
+    /* Используем точное имя из твоего вывода */
+    font-family: "JetBrainsMonoNL Nerd Font Propo", "JetBrainsMonoNL NFP", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: rgba(40, 42, 54, 0); /* Полностью прозрачная подложка */
+}
+
+/* Стили для капсул воркспейсов */
+#workspaces {
+    margin: 4px 2px;
+    padding: 0px 5px;
+    background-color: #282a36;
+    border-radius: 20px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    color: #f8f8f2;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #bd93f9; /* Фиолетовый для активного стола */
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+/* Общий стиль для всех капсул справа и центра */
+#cpu, #memory, #disk, #clock, #language, #tray {
+    padding: 0px 15px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+
+/* Цвета модулей в стиле Dracula */
+#cpu { color: #8be9fd; }
+#memory { color: #ff79c6; }
+#disk.1 { color: #50fa7b; }
+#disk.2 { color: #bd93f9; }
+#language { color: #f1fa8c; }
+#clock { color: #f8f8f2; background-color: #44475a; }

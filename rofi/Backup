@@ -1,0 +1,42 @@
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+
+@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+configuration {
+    modi: "drun,run";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;    /* Вот эта строка самая важная! */
+    icon-theme: "Tela circle"; /* Опционально, но желательно */
+}
+
+
+window {    
+    border-radius:    12px; 
+    border:           2px;
+    border-color:     @foreground;
+    background-color: @background;
+    padding:          5;
+}
+
+listview {
+    enabled:      true;
+    columns:      2;          /* Вот здесь мы задаем количество столбцов */
+    lines:        8;          /* Количество строк в каждом столбце */
+    cycle:        true;
+    dynamic:      true;
+    layout:       vertical;   /* Элементы будут идти сверху вниз в два ряда */
+    
+    spacing:      5px;        /* Расстояние между элементами */
+    padding:      10px;
+}
+
+entry {
+    placeholder:       "Поиск...";
+    placeholder-color: #a0a0a0;
+    cursor:            pointer;
+}
+
+

@@ -1,0 +1,59 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px; /* Уменьшили с 15px до 14px */
+    font-weight: 500;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    -gtk-icon-transform: scale(1);
+}
+
+/* Общий стиль для всех капсул */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#disk,
+#language,
+#tray {
+    padding: 0px 10px; /* Было 18, теперь 10 — станет намного компактнее */
+    margin: 4px 2px;   /* Вертикальный отступ 4px оставит панель тонкой */
+    border-radius: 12px; /* Чуть менее круглые углы выглядят строже на маленькой высоте */
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: 1px solid rgba(189, 147, 249, 0.2);
+}
+
+/* Группа плеера */
+#group-player {
+    background: #282a36;
+    border: 1px solid #6272a4;
+    border-radius: 12px;
+    padding: 0 8px; /* Уменьшили боковые отступы */
+    margin: 4px 4px;
+}
+
+/* Текст песни внутри плеера */
+#custom-playerctl {
+    font-size: 13px; /* Текст песни можно сделать чуть меньше кнопок */
+    padding-left: 8px;
+}
+/* Убираем стандартные рамки и фон у кнопок воркспейсов */
+#workspaces button {
+    color: #6272a4;      /* Цвет неактивных цифр (приглушенный) */
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 6px;
+}
+
+/* Перекрашиваем только АКТИВНУЮ цифру */
+#workspaces button.active {
+    color: #bd93f9;      /* Яркий фиолетовый цвет для текущего стола */
+    font-weight: bold;   /* Делаем цифру жирнее, чтобы выделялась */
+}
+
+/* Убираем эффект выделения при наведении, чтобы не мешал */
+#workspaces button:hover {
+    background: none;
+    color: #f8f8f2;      /* При наведении цифра просто станет белой */
+    box-shadow: none;
+}

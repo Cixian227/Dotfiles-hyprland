@@ -1,3 +1,4 @@
+![Workspace](hyprland.png)
 # Dotfiles-hyprland
 Всем привет это мои доты2 от хупрлэнда!
 1)Скачиваете хупр(я через CachyOS)

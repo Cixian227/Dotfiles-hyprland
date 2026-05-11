@@ -1,4 +1,8 @@
 ![Workspace](hyprland.png)
+![Workspace](2026-05-11-104106_hyprshot.png)
+![Workspace](2026-05-11-104113_hyprshot.png)
+![Workspace](2026-05-11-104051_hyprshot.png)
+![Workspace](2026-05-11-104017_hyprshot.png)
 
 # 🌌 Hyprland Dotfiles
 

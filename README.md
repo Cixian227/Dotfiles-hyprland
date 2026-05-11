@@ -26,7 +26,7 @@ GTK Темы: nwg-look (по умолчанию установлена тема 
 
 Если хотите прям чистый хупр,устанавливаете систему без окружения,у вас запустится терминал и там
 
-вставляете: sudo pacman -S git hyprland waybar rofi-wayland waypaper nwg-look hyprlock awww
+вставляете: sudo pacman -S git yay micro hyprland waybar rofi-wayland waypaper nwg-look hyprlock awww
   
 2. Клонирование репозитория
 

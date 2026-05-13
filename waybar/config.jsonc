@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "group/player"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "disk#1", "disk#2", "hyprland/language", "tray"],
+    "modules-right": ["cpu", "memory", "disk#1", "disk#2","pulseaudio", "hyprland/language", "tray"],
 
    // --- ГРУППА ПЛЕЕРА ---
     "group/player": {
@@ -58,14 +58,41 @@
     
     // --- ОСТАЛЬНЫЕ МОДУЛИ (БЕЗ ИЗМЕНЕНИЙ) ---
     "hyprland/workspaces": {
-        "format": "{id}",
+        "format": "{icon}",
         "on-click": "activate",
-        "all-outputs": true,
-        "sort-by-number": true,
+        "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": "󰎆 ",
+            "4": "󰓓 ",
+            "5": "󰏆",
+            "6": "󰙯 ",
+            "default": " "
+        },
         "persistent-workspaces": {
             "*": 6
         }
     },
+
+"pulseaudio": {
+    // "scroll-step": 1, // %, можно раскомментировать для более плавной прокрутки
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}%  ",
+    "format-source-muted": " ",
+    "format-icons": {
+        "headphone": " ",
+        "hands-free": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+},
 
     "cpu": {
         "format": "󰍛 {usage}%",

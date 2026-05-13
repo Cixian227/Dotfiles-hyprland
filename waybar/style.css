@@ -57,3 +57,16 @@
     color: #f8f8f2;      /* При наведении цифра просто станет белой */
     box-shadow: none;
 }
+
+#pulseaudio {
+    background-color: #f1fa8c; /* Светло-желтый (в стиле Dracula) или любой другой */
+    color: #282a36;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 4px;
+}
+
+#pulseaudio.muted {
+    background-color: #ff5555; /* Красный, когда звук выключен */
+    color: white;
+}

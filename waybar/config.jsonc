@@ -4,11 +4,11 @@
     "height": 34,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces", "group/player"],
+    "modules-left": ["hyprland/workspaces", "custom/cava"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk#1", "disk#2","pulseaudio", "hyprland/language", "tray"],
 
-   // --- ГРУППА ПЛЕЕРА ---
+    // --- ГРУППА ПЛЕЕРА ---
     "group/player": {
         "orientation": "horizontal",
         "modules": [
@@ -19,11 +19,17 @@
         ]
     },
 
-  "custom/playerctl": {
-        "format": "{}", // Убрали значок отсюда
+"custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/cava.sh",
+    "tooltip": false,
+    "restart-interval": 1 // На случай, если скрипт упадет
+},
+		
+    "custom/playerctl": {
+        "format": "{}", 
         "return-type": "json",
         "max-length": 35,
-        // Теперь иконка 󰎈 выводится только тогда, когда есть метаданные
         "exec": "while true; do if playerctl status > /dev/null 2>&1; then playerctl metadata --format '{\"text\": \"󰎈 {{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'; else echo '{\"text\": \"\", \"class\": \"hidden\"}'; fi; sleep 1; done",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
@@ -56,7 +62,6 @@
         "tooltip": false
     }, 
     
-    // --- ОСТАЛЬНЫЕ МОДУЛИ (БЕЗ ИЗМЕНЕНИЙ) ---
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -74,25 +79,24 @@
         }
     },
 
-"pulseaudio": {
-    // "scroll-step": 1, // %, можно раскомментировать для более плавной прокрутки
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}%  ",
-    "format-source-muted": " ",
-    "format-icons": {
-        "headphone": " ",
-        "hands-free": " ",
-        "headset": " ",
-        "phone": " ",
-        "portable": " ",
-        "car": " ",
-        "default": ["", "", " "]
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%  ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
     },
-    "on-click": "pavucontrol"
-},
 
     "cpu": {
         "format": "󰍛 {usage}%",

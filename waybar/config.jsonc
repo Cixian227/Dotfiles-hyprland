@@ -4,8 +4,8 @@
     "height": 34,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces", "custom/cava"],
-    "modules-center": ["clock"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock", "wlr/taskbar"],
     "modules-right": ["cpu", "memory", "disk#1", "disk#2","pulseaudio", "hyprland/language", "tray"],
 
     // --- ГРУППА ПЛЕЕРА ---
@@ -24,6 +24,20 @@
     "exec": "~/.config/waybar/cava.sh",
     "tooltip": false,
     "restart-interval": 1 // На случай, если скрипт упадет
+},
+
+  // --- Taskbar ---
+"wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+               "Alacritty" 
+            ],
+    "rewrite": {
+        "Firefox — Sharing Indicator": ""
+    }
 },
 		
     "custom/playerctl": {
@@ -71,7 +85,7 @@
             "3": "󰎆 ",
             "4": "󰓓 ",
             "5": "󰏆",
-            "6": "󰙯 ",
+            "6": " ",
             "default": " "
         },
         "persistent-workspaces": {

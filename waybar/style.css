@@ -79,3 +79,21 @@
     background-color: #ff5555; /* Красный, когда звук выключен */
     color: white;
 }
+
+#taskbar {
+    background: rgba(43, 48, 59, 0.5);
+    border-radius: 10px;
+    margin: 3px 0;
+}
+
+#taskbar button {
+    padding: 0 5px;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
+}
+
+#taskbar button.active {
+    background-color: #7c818c;
+    border-bottom: 3px solid #ffffff;
+}
+

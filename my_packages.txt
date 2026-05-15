@@ -33,6 +33,7 @@ cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 cachyos-zsh-config
 cantarell-fonts
+cava
 chwd
 code
 cryptsetup
@@ -87,6 +88,7 @@ hwdetect
 hwinfo
 hyprland
 hyprlock
+hyprshot
 inetutils
 intel-lpmd
 intel-ucode
@@ -177,7 +179,9 @@ steam
 sudo
 sysfsutils
 system-config-printer
+telegram-desktop
 texinfo
+tg-ws-proxy-git
 thunar
 thunar-archive-plugin
 thunar-volman

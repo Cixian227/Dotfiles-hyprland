@@ -1,8 +1,10 @@
+7zip
 accountsservice
 alacritty
 alsa-firmware
 alsa-plugins
 alsa-utils
+appimagelauncher
 awesome-terminal-fonts
 awww
 base
@@ -35,14 +37,12 @@ cachyos-zsh-config
 cantarell-fonts
 cava
 chwd
-code
 cryptsetup
 cups
 cups-filters
 cups-pdf
 device-mapper
 diffutils
-dmidecode
 dmraid
 dnsmasq
 dosfstools
@@ -153,7 +153,6 @@ plocate
 plymouth
 polkit-kde-agent
 poppler-glib
-portproton
 power-profiles-daemon
 protonup-qt
 pv
@@ -177,6 +176,7 @@ stacer
 starship
 steam
 sudo
+symlinks
 sysfsutils
 system-config-printer
 telegram-desktop

@@ -1,0 +1,39 @@
+[global]
+    ### Позиция и размеры ###
+    monitor = 0
+    follow = mouse
+    width = 330
+    height = 110
+    origin = top-right
+    offset = 15x10
+    notification_limit = 4
+
+    ### Внешний вид (Dracula Theme) ###
+    # Используем JetBrains Mono, но если хочешь пиксельный, можешь вернуть Monocraft
+    font = JetBrains Mono 10
+    
+    corner_radius = 8
+    frame_size = 1
+    frame_color ="#383a59" # Фирменный фиолетовый Dracula
+    separator_color = frame
+    
+    # Полоса прогресса внутри уведомлений
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+
+[urgency_low]
+    background = "#282a36" # Темный фон Dracula
+    foreground = "#6272a4" # Приглушенный серо-синий текст
+    timeout = 4
+
+[urgency_normal]
+    background = "#282a36" # Темный фон Dracula
+    foreground = "#f8f8f2" # Основной белый текст
+    timeout = 6
+
+[urgency_critical]
+    background = "#282a36"
+    foreground = "#ff5555" # Красный текст для ошибок
+    frame_color = "#ff79c6" # Ядовито-розовая рамка для внимания
+    timeout = 0

@@ -4,7 +4,7 @@
     "height": 34,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "custom/playerctl"],
     "modules-center": ["clock", "wlr/taskbar"],
     "modules-right": ["cpu", "memory", "disk#1", "disk#2","pulseaudio", "hyprland/language", "tray"],
 
@@ -113,12 +113,12 @@
     },
 
     "cpu": {
-        "format": "󰍛 {usage}%",
+        "format": "󰍛  {usage}%",
         "interval": 2
     },
 
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "interval": 2
     },
 
@@ -138,7 +138,7 @@
     },
 
     "hyprland/language": {
-        "format": "󰌌 {}",
+        "format": "󰌌  {}",
         "format-en": "EN",
         "format-ru": "RU"
     },

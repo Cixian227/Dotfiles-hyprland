@@ -7,6 +7,12 @@
     -gtk-icon-transform: scale(1);
 }
 
+window#waybar {
+    background-color: rgba(40, 42, 54, 0.92);
+    border-radius: 5px;
+    border: none;
+}
+
 /* Общий стиль для всех капсул */
 #workspaces,
 #clock,
